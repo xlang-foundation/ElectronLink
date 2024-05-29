@@ -7,12 +7,12 @@ project ("ElectronLink")
 
 # Function to search for the xlang/api directory
 function(find_xlang_api_dir)
-    set(XLANG_API_DIR "" CACHE INTERNAL "Path to xlang/api")
+    set(XLANG_API_DIR "" CACHE INTERNAL "Path to xlang/Api")
 
     # Check if xlang/api exists in the specified path
     function(check_dir path)
-        if (IS_DIRECTORY "${path}/xlang/api")
-            set(XLANG_API_DIR "${path}/xlang/api" CACHE INTERNAL "Path to xlang/api" FORCE)
+        if (IS_DIRECTORY "${path}/xlang/Api")
+            set(XLANG_API_DIR "${path}/xlang/api" CACHE INTERNAL "Path to xlang/Api" FORCE)
         endif()
     endfunction()
 
