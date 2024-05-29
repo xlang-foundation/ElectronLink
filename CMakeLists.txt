@@ -9,10 +9,10 @@ project ("ElectronLink")
 function(find_xlang_api_dir)
     set(XLANG_API_DIR "" CACHE INTERNAL "Path to xlang/Api")
 
-    # Check if xlang/api exists in the specified path
+    # Check if xlang/Api exists in the specified path
     function(check_dir path)
         if (IS_DIRECTORY "${path}/xlang/Api")
-            set(XLANG_API_DIR "${path}/xlang/api" CACHE INTERNAL "Path to xlang/Api" FORCE)
+            set(XLANG_API_DIR "${path}/xlang/Api" CACHE INTERNAL "Path to xlang/Api" FORCE)
         endif()
     endfunction()
 
@@ -27,16 +27,16 @@ function(find_xlang_api_dir)
     endforeach()
 
     if (XLANG_API_DIR STREQUAL "")
-        message(FATAL_ERROR "Could not find xlang/api directory")
+        message(FATAL_ERROR "Could not find xlang/Api directory")
     else()
-        message(STATUS "Found xlang/api directory at ${XLANG_API_DIR}")
+        message(STATUS "Found xlang/Api directory at ${XLANG_API_DIR}")
     endif()
 endfunction()
 
-# Call the function to find the xlang/api directory
+# Call the function to find the xlang/Api directory
 find_xlang_api_dir()
 
-# Include the xlang/api directory
+# Include the xlang/Api directory
 include_directories(${XLANG_API_DIR})
 
 # Find source files
