@@ -17,7 +17,7 @@ namespace X
 {
     namespace ElectonLink
     {
-        static bool setSlaveAddress(int deviceAddress) {
+        bool SMBus::setSlaveAddress(int deviceAddress) {
             if (ioctl(fileDescriptor, I2C_SLAVE, deviceAddress) < 0) {
                 perror("Failed to set slave address");
                 return false;

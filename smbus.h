@@ -67,6 +67,8 @@ namespace X
 			}
 			void writeBlockData(int i2c_addr, uint8_t reg,
 				const std::vector<uint8_t>& data, bool force = false);
+		protected:
+			bool setSlaveAddress(int deviceAddress);
 		};
 
 	} // namespace ElectonLink

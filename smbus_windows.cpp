@@ -4,6 +4,9 @@ namespace X
 {
 	namespace ElectonLink
 	{
+		bool SMBus::setSlaveAddress(int deviceAddress) {
+			return true;
+		}
 		SMBus::~SMBus() {
 			if (m_isOpen) {
 				closeBus();
