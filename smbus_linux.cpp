@@ -37,7 +37,7 @@ namespace X
                 busPath = "/dev/i2c-" + std::to_string((int)m_busName);
             }
             else {
-                busPath = m_busName.toString();
+                busPath = m_busName.ToString();
             }
 
             fileDescriptor = open(busPath.c_str(), O_RDWR);
