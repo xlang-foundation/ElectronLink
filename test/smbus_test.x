@@ -1,5 +1,5 @@
-# Import the ElectronLink module
-from ElectronLink import electronlink
+# Import the electron_link module
+from electron_link import electronlink
 
 # Create an SMBus instance for bus 1
 sb = electronlink.smbus(1)

@@ -3,7 +3,7 @@
 
 cmake_minimum_required (VERSION 3.8)
 
-project ("ElectronLink")
+project ("electron_link")
 
 # Function to search for the xlang/api directory
 function(find_xlang_api_dir)
